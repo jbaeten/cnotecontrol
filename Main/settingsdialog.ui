@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SettingsDialog</class>
+ <widget class="QDialog" name="SettingsDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>509</width>
+    <height>217</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Plugin settings - SBP Prototype</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLabel {}
+
+QFrame {
+	background-color: rgb(15, 135, 70);
+}
+
+QDialog {
+	background-color: rgb(15, 110, 55);
+}
+
+QStackedWidget {
+	background-color: rgb(15, 110, 55);
+}
+
+QPushButton {
+	font-family: &quot;Segoe UI&quot;;
+	/*font-weight: bold;*/
+	color: white;
+	border: none;
+	padding: 6px;
+}
+
+QPushButton:hover {
+	background-color: rgb(15, 160, 80);
+}
+
+QPushButton:checked {
+	background-color: rgb(15, 160, 80);
+}
+
+#btnDone {
+	font-family: &quot;Segoe UI&quot;;
+	/*font-weight: bold;*/
+	color: white;
+	border: 2px solid rgb(14, 109, 56);
+	padding: 6px;
+}
+
+#btnDone:hover {
+	background-color: rgb(15, 160, 80);
+	border: 2px solid white;
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="margin">
+    <number>1</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QFrame" name="frame">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QStackedWidget" name="stackedWidget">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+	background-color: rgb(15, 110, 55);
+}</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnDone">
+         <property name="text">
+          <string>Done</string>
+         </property>
+         <property name="icon">
+          <iconset resource="images.qrc">
+           <normaloff>:/checkmark.png</normaloff>:/checkmark.png</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
+ <connections/>
+</ui>
